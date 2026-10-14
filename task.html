@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אשף – שלב 2</title>
+  <!-- <link rel="stylesheet" href="tokens.css"> -->
+  <link rel="stylesheet" href="wizard-step2.css">
+</head>
+<body class="wizard-page">
+
+  <main class="wizard-card">
+
+    <header class="wizard-header">
+      <button type="button" class="wizard-skip" id="skip">דלג על השלב</button>
+      <span class="wizard-step-counter">שלב 2 מתוך 3</span>
+    </header>
+
+    <div class="wizard-progress" role="progressbar"
+         aria-valuemin="1" aria-valuemax="3" aria-valuenow="2"
+         aria-label="שלב 2 מתוך 3">
+      <span class="wizard-progress__segment is-done"></span>
+      <span class="wizard-progress__segment is-done"></span>
+      <span class="wizard-progress__segment"></span>
+    </div>
+
+    <div class="wizard-badge">
+      <span class="wizard-badge__icon" aria-hidden="true">✓</span>
+      <span class="wizard-badge__text">ימים א'-ה', 09:00-17:00</span>
+    </div>
+
+    <h1 class="wizard-title">כמה זמן נטו יש למשימות?</h1>
+    <p class="wizard-subtitle">
+      מתוך שעות העבודה - כמה שעות פנויות באמת למשימות, בלי ישיבות והפסקות.
+    </p>
+
+    <div class="time-counter">
+      <button type="button" class="time-counter__btn" id="decrement"
+              aria-label="הפחתת שעה">–</button>
+      <span class="time-counter__value" id="hours-value" aria-live="polite">6</span>
+      <button type="button" class="time-counter__btn" id="increment"
+              aria-label="הוספת שעה">+</button>
+      <span class="time-counter__unit">שעות ביום</span>
+    </div>
+
+    <div class="quick-pick">
+      <span class="quick-pick__label">בחירה מהירה</span>
+      <div class="quick-pick__options" role="group" aria-label="בחירה מהירה של שעות">
+        <button type="button" class="quick-pick__chip" data-hours="7">7</button>
+        <button type="button" class="quick-pick__chip is-active" data-hours="6"
+                aria-pressed="true">6</button>
+        <button type="button" class="quick-pick__chip" data-hours="5">5</button>
+        <button type="button" class="quick-pick__chip" data-hours="4">4</button>
+      </div>
+    </div>
+
+    <p class="wizard-note">
+      מתוך 8 שעות עבודה, "היום שלי" יציע משימות עד שסכום הערכות הזמן שלהן יגיע למספר הזה.
+    </p>
+
+    <footer class="wizard-actions">
+      <button type="button" class="btn btn--primary" id="next">המשך</button>
+      <button type="button" class="btn btn--ghost" id="prev">הקודם</button>
+    </footer>
+
+  </main>
+
+  <script src="wizard-step2.js"></script>
+</body>
+</html>
